@@ -26,14 +26,14 @@ install --mode=700 --directory %{buildroot}%{_sysconfdir}/copr-nightly
 # Install service and trigger units.
 install --mode=755 --directory %{buildroot}%{_unitdir}
 install --mode=644 --target-directory=%{buildroot}%{_unitdir} \
-    copr-nightly@.service copr-nightly@.trigger
+    copr-nightly@.service copr-nightly@.timer
 
 
 %files
 %license LICENSE
 %dir %{_sysconfdir}/copr-nightly
 %{_unitdir}/copr-nightly@.service
-%{_unitdir}/copr-nightly@.trigger
+%{_unitdir}/copr-nightly@.timer
 
 
 %changelog
