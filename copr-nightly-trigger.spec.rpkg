@@ -1,0 +1,38 @@
+Name:           {{{ git_dir_name }}}
+Version:        {{{ git_dir_version }}}
+Release:        1%{?dist}
+Summary:        Systemd unit to trigger a nightly rebuild of a COPR
+License:        MIT
+URL:            https://github.com/chrisbouchard/copr-nightly-trigger
+VCS:            {{{ git_dir_vcs }}}
+Source:         {{{ git_dir_pack }}}
+
+Requires:       copr-cli
+Requires:       systemd
+
+
+%description
+Systemd unit to trigger a nightly rebuild of a COPR
+
+
+%prep
+{{{ git_dir_setup_macro }}}
+
+
+%install
+# Install service and trigger units.
+install --mode=755 --directory %{buildroot}%{_unitdir}
+install --mode=644 --target-directory=%{buildroot}%{_unitdir} \
+    copr-nightly@.service copr-nightly@.trigger
+
+
+%files
+%license LICENSE
+%{_unitdir}/copr-nightly@.service
+%{_unitdir}/copr-nightly@.trigger
+
+
+%changelog
+{{{ git_dir_changelog }}}
+
+# vim: syntax=spec

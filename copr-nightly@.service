@@ -1,0 +1,13 @@
+[Unit]
+Description=Run a COPR build for %I
+
+[Service]
+DynamicUser=true
+Type=oneshot
+ExecStart=copr \
+    --config "$CREDENTIALS_DIRECTORY/config" \
+    build-package \
+        --name "$PACKAGE" \
+        "$COPR_PROJECT"
+
+# vim: syntax=systemd
