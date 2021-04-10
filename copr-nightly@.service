@@ -4,7 +4,7 @@ Description=Run a COPR build for %I
 [Service]
 DynamicUser=true
 Type=oneshot
-ExecStart=copr \
+ExecStart=/usr/bin/copr \
     --config "$CREDENTIALS_DIRECTORY/config" \
     build-package \
         --name "$PACKAGE" \
