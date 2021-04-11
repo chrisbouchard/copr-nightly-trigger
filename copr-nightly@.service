@@ -1,5 +1,5 @@
 [Unit]
-Description=Run a COPR build for %I
+Description=Run a Copr build for %I
 
 [Service]
 DynamicUser=true

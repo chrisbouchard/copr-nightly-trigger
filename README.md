@@ -1,14 +1,14 @@
-# COPR Nightly Trigger
+# Copr Nightly Trigger
 
-[![COPR build status][copr-status-image]][copr-nightly-trigger-package]
+[![Copr build status][copr-status-image]][copr-nightly-trigger-package]
 
-Systemd units to trigger nightly builds of one or more COPR projects.
+Systemd units to trigger nightly builds of one or more Copr projects.
 
 
 ## Installation
 
 This package is available from the
-[chrisbouchard/upliftinglemma][upliftinglemma-project] COPR. Assuming
+[chrisbouchard/upliftinglemma][upliftinglemma-project] Copr. Assuming
 you're using a recent version of Fedora or CentOS, you can install using `dnf`.
 
 ```console

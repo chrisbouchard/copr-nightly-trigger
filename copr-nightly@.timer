@@ -1,5 +1,5 @@
 [Unit]
-Description=Trigger nightly COPR build for %I
+Description=Trigger nightly Copr build for %I
 
 [Timer]
 OnCalendar=daily

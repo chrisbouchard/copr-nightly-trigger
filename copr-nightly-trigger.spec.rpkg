@@ -1,7 +1,7 @@
 Name:           {{{ git_dir_name }}}
 Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
-Summary:        Systemd unit to trigger a nightly rebuild of a COPR
+Summary:        Systemd units to trigger a nightly rebuild of a Copr
 License:        MIT
 URL:            https://github.com/chrisbouchard/copr-nightly-trigger
 VCS:            {{{ git_dir_vcs }}}
@@ -14,7 +14,7 @@ Requires:       systemd
 
 
 %description
-Systemd unit to trigger a nightly rebuild of a COPR
+Systemd units to trigger a nightly rebuild of a Copr
 
 
 %prep
