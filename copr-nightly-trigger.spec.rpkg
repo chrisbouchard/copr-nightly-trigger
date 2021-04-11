@@ -1,5 +1,5 @@
 Name:           {{{ git_dir_name }}}
-Version:        {{{ git_dir_version }}}
+Version:        {{{ git_dir_version name=copr-nightly-trigger lead=1 }}}
 Release:        1%{?dist}
 Summary:        Systemd units to trigger a nightly rebuild of a Copr
 License:        MIT
