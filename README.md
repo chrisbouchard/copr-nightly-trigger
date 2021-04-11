@@ -38,6 +38,16 @@ Environment=PACKAGE=foo
 LoadCredential=copr:/etc/copr-nightly/your-copr-credentials.conf
 ```
 
+###### /etc/copr-nightly/your-copr-credentials.conf
+```conf
+[copr-cli]
+login = ...
+username = yourusername
+token = ...
+copr_url = https://copr.fedorainfracloud.org
+# expiration date: 2021-04-01
+```
+
 (The `/etc/copr-nightly` directory is reserved for Copr credentials files, and
 is owned by root with 0600 permissions to keep out prying eyes, but the path
 can technically be anywhere.)
@@ -64,6 +74,13 @@ enable the timer. For our `foo` example, we'd enable the timer as follows:
 ```console
 $ systemctl enable copr-nightly@foo.timer
 ```
+
+
+## Future Work
+
+* It would be nice if we didn't have to keep the credentials files up-to-date
+  manualy, given that they expire every 180 days. There may be a way to do this
+  using the Copr CLI, but I haven't learned it yet.
 
 
 [copr-api]: https://copr.fedorainfracloud.org/api/
