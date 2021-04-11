@@ -72,7 +72,7 @@ corresponding service at that time. Once the service is configured, you must
 enable the timer. For our `foo` example, we'd enable the timer as follows:
 
 ```console
-$ systemctl enable copr-nightly@foo.timer
+$ systemctl enable --now copr-nightly@foo.timer
 ```
 
 
