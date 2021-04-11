@@ -5,9 +5,9 @@ Description=Run a COPR build for %I
 DynamicUser=true
 Type=oneshot
 ExecStart=/usr/bin/copr \
-    --config="${CREDENTIALS_DIRECTORY}/config" \
+    --config="${CREDENTIALS_DIRECTORY}/copr" \
     build-package \
         --name="${PACKAGE}" \
-        "${COPR_PROJECT}"
+        "${PROJECT}"
 
 # vim: syntax=systemd
